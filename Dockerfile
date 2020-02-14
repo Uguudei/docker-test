@@ -14,9 +14,9 @@ RUN yum install -y python36 && \
     rm -rf /var/cache/yum
 
 RUN python3.6 -m pip install -r requirement.txt
-
+CMD pwd
 WORKDIR /myapp
-
+CMD pwd
 COPY . /myapp
 
 # Uncomment if the tools package is added
