@@ -11,4 +11,4 @@ RUN  yum -y install oracle-release-el7 && \
 # Uncomment if the tools package is added
 # ENV PATH=$PATH:/usr/lib/oracle/${release}.${update}/client64/bin
 
-CMD ["sqlplus", "-v"]
+# CMD ["sqlplus", "-v"]
