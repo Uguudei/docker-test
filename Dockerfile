@@ -10,10 +10,10 @@ RUN  yum -y install oracle-release-el7 && \
      rm -rf /var/cache/yum
 
 # Install Python
-RUN yum install -y python3.6 && \
+RUN yum install -y python36 && \
     rm -rf /var/cache/yum
 
-RUN pip3 install 
+RUN pip3 install requirement.txt
 
 WORKDIR /myapp
 
