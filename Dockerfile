@@ -23,4 +23,4 @@ COPY . /myapp
 # ENV PATH=$PATH:/usr/lib/oracle/${release}.${update}/client64/bin
 
 CMD ["sqlplus", "-v"]
-CMD exec python3.7 main.py
+CMD exec python3 main.py
