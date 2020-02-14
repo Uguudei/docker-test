@@ -22,5 +22,4 @@ COPY src/ /myapp
 # Uncomment if the tools package is added
 # ENV PATH=$PATH:/usr/lib/oracle/${release}.${update}/client64/bin
 
-CMD ["sqlplus", "-v"]
 CMD exec python3 main.py
