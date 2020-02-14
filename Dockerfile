@@ -13,11 +13,13 @@ RUN  yum -y install oracle-release-el7 && \
 RUN yum install -y python36 && \
     rm -rf /var/cache/yum
 
-RUN python3.6 -m pip install -r requirement.txt
 CMD pwd
 WORKDIR /myapp
 CMD pwd
 COPY . /myapp
+
+# Install Python dependencies
+RUN python3.6 -m pip install -r requirement.txt
 
 # Uncomment if the tools package is added
 # ENV PATH=$PATH:/usr/lib/oracle/${release}.${update}/client64/bin
