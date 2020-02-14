@@ -1,1 +1,2 @@
-print('Bye Bye')
+def bye():
+  print('Bye Bye')
