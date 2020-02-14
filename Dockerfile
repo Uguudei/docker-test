@@ -1,16 +1,26 @@
 FROM oraclelinux:7-slim
 
-# ARG release=19
-# ARG update=5
+ARG release=19
+ARG update=5
 
+# Install Oracle Instant Client
 RUN  yum -y install oracle-release-el7 && \
      yum-config-manager --enable ol7_oracle_instantclient && \
-     yum -y install oracle-instantclient19.5-basic && \
-     # yum -y install oracle-instantclient${release}.${update}-basic oracle-instantclient${release}.${update}-devel oracle-instantclient${release}.${update}-sqlplus && \
-     # yum -y install oracle-instantclient${release}.${update}-basic && \
+     yum -y install oracle-instantclient${release}.${update}-basic oracle-instantclient${release}.${update}-devel oracle-instantclient${release}.${update}-sqlplus && \
      rm -rf /var/cache/yum
+
+# Install Python
+RUN yum install -y python37 && \
+    rm -rf /var/cache/yum
+
+RUN pip3 install 
+
+WORKDIR /myapp
+
+COPY /src /myapp
 
 # Uncomment if the tools package is added
 # ENV PATH=$PATH:/usr/lib/oracle/${release}.${update}/client64/bin
 
 CMD ["sqlplus", "-v"]
+CMD exec python3.7 main.py
