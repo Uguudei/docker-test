@@ -14,7 +14,7 @@ RUN yum install -y python36 && \
     rm -rf /var/cache/yum
 
 WORKDIR /myapp
-COPY src/main.py /myapp
+COPY src/ /myapp
 
 # Install Python dependencies
 # RUN python3.6 -m pip install -r requirement.txt
