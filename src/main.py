@@ -1,5 +1,11 @@
+from module.hello import hello
+from module.bye import bye
+
+
 def main():
-  print('Hello World :)')
-  
+  hello()
+  bye()
+
+
 if __name__== "__main__":
   main()
