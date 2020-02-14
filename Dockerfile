@@ -17,7 +17,7 @@ RUN python3.6 -m pip install -r requirement.txt
 
 WORKDIR /myapp
 
-COPY src/ /myapp
+COPY . /myapp
 
 # Uncomment if the tools package is added
 # ENV PATH=$PATH:/usr/lib/oracle/${release}.${update}/client64/bin
