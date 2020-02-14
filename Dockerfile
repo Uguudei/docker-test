@@ -1,4 +1,4 @@
-FROM oraclelinux:7-slim
+FROM oraclelinux:8-slim
 
 ARG release=19
 ARG update=5
