@@ -17,7 +17,7 @@ RUN pip3 install
 
 WORKDIR /myapp
 
-COPY /src /myapp
+COPY src/ /myapp
 
 # Uncomment if the tools package is added
 # ENV PATH=$PATH:/usr/lib/oracle/${release}.${update}/client64/bin
