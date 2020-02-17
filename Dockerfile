@@ -15,9 +15,10 @@ RUN yum install -y python36 && \
 
 WORKDIR /myapp
 COPY src/ /myapp
+COPY requirements.txt /myapp
 
 # Install Python dependencies
-# RUN python3.6 -m pip install -r requirement.txt
+RUN pip3 install -r requirements.txt
 
 # Uncomment if the tools package is added
 # ENV PATH=$PATH:/usr/lib/oracle/${release}.${update}/client64/bin
