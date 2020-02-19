@@ -3,8 +3,7 @@ from module.bye import bye
 
 
 def main():
-  hello()
-  bye()
+  print('Trying to connect Oracle DB')
 
 
 if __name__== "__main__":
