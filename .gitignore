@@ -139,9 +139,9 @@ config.yaml
 # Ignore Pycharm project files
 # But include Pycharm project code styles
 .idea/**
-!.idea/deployment.xml
-!.idea/codeStyles/
-!.idea/codeStyles/Project.xml
+# !.idea/deployment.xml
+# !.idea/codeStyles/
+# !.idea/codeStyles/Project.xml
 # Following will include everything in codeStyles folder
 # !.idea/codeStyles/**
 
