@@ -1,3 +1,4 @@
+import cx_Oracle
 from src.module.data_export import oracle_export
 from src.module.data_loader import oracle_import
 
