@@ -17,12 +17,12 @@ def elapsed_time(total_seconds):
     hours = int(total_seconds // 3600 - total_seconds // 86400 * 24)
     minutes = int(total_seconds // 60 - total_seconds // 3600 * 60)
     seconds = int(total_seconds - total_seconds // 60 * 60)
-    ms = int(total_seconds - total_seconds // 60 * 60)
+    ms = int((total_seconds - total_seconds // 60 * 60) % 1 * 1000)
     elapsed_days = '{} d '.format(days) if days >= 1 else ''
     elapsed_hours = '{} hr '.format(hours) if hours >= 1 else ''
     elapsed_minutes = '{} min '.format(minutes) if minutes >= 1 else ''
     elapsed_seconds = '{} sec '.format(seconds) if seconds >= 1 else ''
-    elapsed_ms = '{} ms'.format(ms) if ms > 0 else ''
+    elapsed_ms = '{} ms'.format(ms) if minutes == 0 else ''
     return elapsed_days + elapsed_hours + elapsed_minutes + elapsed_seconds + elapsed_ms
 
 

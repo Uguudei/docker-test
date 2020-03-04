@@ -30,6 +30,9 @@ RUN yum install -y python36 && \
 
 # Set working directory
 WORKDIR /myapp
+
+# Copy initialization script
+COPY script.py /myapp
 # Copy source code
 COPY src/ /myapp/src
 

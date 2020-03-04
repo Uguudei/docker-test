@@ -5,15 +5,15 @@ from src.export import export
 from src.read import read
 
 
-def main(command):
-    print('main.py initiated')
+def run(command):
+    print('run() initiated')
     print('All commands:', command)
     if 'export' in command:
         export()
     if 'read' in command:
         read()
-    print('main.py ended')
+    print('run() ended')
 
 
 if __name__ == '__main__':
-    main(sys.argv)
+    run(sys.argv)
