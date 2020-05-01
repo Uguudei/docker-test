@@ -1,0 +1,18 @@
+# Copy this file
+# Rename the copy as as config.yaml
+# Replace values in the copy with configuration
+
+# OS environmental variables
+os_env:
+  NLS_LANG: "AMERICAN_AMERICA.AL32UTF8" # language character set
+  LD_LIBRARY_PATH: '/usr/lib/oracle/12.2/client64/lib' # LD_LIBRARY_PATH of oracle client lib
+  ORACLE_HOME: '/usr/lib/oracle/12.2/client64' # your oracle home location
+  TNS_ADMIN: '/usr/lib/oracle/12.2/client64/network/admin' # TNS admin location if necessary
+
+# Oracle Client user login and database address
+oracle:
+  username: 'username' # enter your username
+  password: 'password' # enter your password
+  host: 'ip_address' # 192.192.192.192
+  port: '1521' # enter the oracle port number
+  service_name: 'service_name' # enter the oracle db service name: 'datawarehouse', 'dwh' etc
