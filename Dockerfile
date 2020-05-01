@@ -43,4 +43,4 @@ RUN pip3 install -r src/requirements.txt
 # Uncomment if the tools package is added
 # ENV PATH=$PATH:/usr/lib/oracle/${release}.${update}/client64/bin
 
-CMD exec python3 src/main.py
+CMD exec python3 script.py export
