@@ -20,8 +20,8 @@ ENV ORACLE_SERVICE $(ORACLE_SERVICE)
 RUN  yum -y install oracle-release-el7 && \
      yum-config-manager --enable ol7_oracle_instantclient && \
      yum -y install oracle-instantclient${release}.${update}-basic && \
-     oracle-instantclient${release}.${update}-devel && \
-     oracle-instantclient${release}.${update}-sqlplus && \
+     yum -y oracle-instantclient${release}.${update}-devel && \
+     yum -y oracle-instantclient${release}.${update}-sqlplus && \
      rm -rf /var/cache/yum
 
 # Install Python
