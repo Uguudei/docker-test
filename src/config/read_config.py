@@ -5,7 +5,7 @@ import yaml
 
 def set_env_vars(env_vars):
     """Set environmental variable for importing from Oracle DB"""
-    os.environ["NLS_LANG"] = env_vars['NLS_LANG']
+    os.environ['NLS_LANG'] = env_vars['NLS_LANG']
     os.environ['LD_LIBRARY_PATH'] = env_vars['LD_LIBRARY_PATH']
     os.environ['ORACLE_HOME'] = env_vars['ORACLE_HOME']
     os.environ['TNS_ADMIN'] = env_vars['TNS_ADMIN']
@@ -20,7 +20,6 @@ def set_config():
         with open('src/config/config.yaml', 'r') as yml_file:
             config = yaml.load(yml_file, Loader=yaml.BaseLoader)
         if 'os_env' in config:
-            print('exists')
             set_env_vars(config['os_env'])
         return config['oracle']
     else:
