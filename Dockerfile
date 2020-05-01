@@ -2,7 +2,7 @@ FROM oraclelinux:7-slim
 
 # Instant client release
 ARG release=19
-ARG update=5
+ARG update=6
 
 # Oracle connection variables
 ARG ORACLE_USERNAME
