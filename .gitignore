@@ -128,6 +128,9 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# PL/SQL file created when editing .sql
+*.~sql
+
 # config.yaml file includes oracle connection settings
 config.yaml
 
@@ -139,9 +142,9 @@ config.yaml
 # Ignore Pycharm project files
 # But include Pycharm project code styles
 .idea/**
-# !.idea/deployment.xml
-# !.idea/codeStyles/
-# !.idea/codeStyles/Project.xml
+!.idea/deployment.xml
+!.idea/codeStyles/
+!.idea/codeStyles/Project.xml
 # Following will include everything in codeStyles folder
 # !.idea/codeStyles/**
 
