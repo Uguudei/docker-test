@@ -31,14 +31,18 @@ RUN yum install -y python36 && \
 # Set working directory
 WORKDIR /myapp
 
-# Copy initialization script
-COPY script.py /myapp
-# Copy source code
-COPY src/ /myapp/src
+# Copy requirements file
+# COPY requirements.txt /myapp
 
 # Install Python dependencies
 # requirements.txt file is in src folder
 RUN pip3 install -r src/requirements.txt
+
+# Copy necessary files/dirs
+# Copy initialization script
+COPY script.py /myapp
+# Copy source code
+COPY src/ /myapp/src
 
 # Uncomment if the tools package is added
 # ENV PATH=$PATH:/usr/lib/oracle/${release}.${update}/client64/bin
