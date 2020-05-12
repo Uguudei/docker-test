@@ -34,7 +34,8 @@ WORKDIR /myapp
 # Copy requirements file
 COPY src/requirements.txt /myapp
 # Install Python dependencies
-RUN pip3 install -r requirements.txt
+RUN pip3 install -r requirements.txt && \
+    pip cache purge
 
 # Copy initialization script
 COPY script.py /myapp
