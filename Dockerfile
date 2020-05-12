@@ -42,7 +42,5 @@ COPY script.py /myapp
 # Copy source code
 COPY src/ /myapp/src
 
-# Uncomment if the tools package is added
-# ENV PATH=$PATH:/usr/lib/oracle/${release}.${update}/client64/bin
-
+# Execute command
 CMD exec python3 script.py export
