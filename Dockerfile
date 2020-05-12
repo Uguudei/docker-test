@@ -32,13 +32,10 @@ RUN yum install -y python36 && \
 WORKDIR /myapp
 
 # Copy requirements file
-# COPY requirements.txt /myapp
-
+COPY src/requirements.txt /myapp
 # Install Python dependencies
-# requirements.txt file is in src folder
-RUN pip3 install -r src/requirements.txt
+RUN pip3 install -r requirements.txt
 
-# Copy necessary files/dirs
 # Copy initialization script
 COPY script.py /myapp
 # Copy source code
