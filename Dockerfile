@@ -26,7 +26,6 @@ RUN  yum -y install oracle-release-el7 && \
 
 # Install Python
 RUN yum install -y python36 && \
-    pip3 install --upgrade pip && \
     rm -rf /var/cache/yum
 
 # Set working directory
@@ -35,8 +34,7 @@ WORKDIR /myapp
 # Copy requirements file
 COPY src/requirements.txt /myapp
 # Install Python dependencies
-RUN pip install -r requirements.txt && \
-    pip cache purge
+RUN pip3 install -r requirements.txt
 
 # Copy initialization script
 COPY script.py /myapp
