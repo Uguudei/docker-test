@@ -25,7 +25,7 @@ RUN  yum -y install oracle-release-el7 && \
      rm -rf /var/cache/yum
 
 # Install Python
-RUN yum install -y python37 && \
+RUN yum install -y python36 && \
     rm -rf /var/cache/yum
 
 # Set working directory
