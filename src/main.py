@@ -9,9 +9,9 @@ def run(command):
     print('run() initiated')
     print('All commands:', command)
     if 'export' in command:
-        export()
+        print('command 1')
     if 'read' in command:
-        read()
+        print('command 2')
     print('run() ended')
 
 
