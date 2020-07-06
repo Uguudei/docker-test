@@ -10,8 +10,10 @@ def run(command):
     print('All commands:', command)
     if 'export' in command:
         print('command 1')
-    if 'read' in command:
+    elif 'read' in command:
         print('command 2')
+    elif len(command) == 1:
+        print('no command')
     print('run() ended')
 
 
