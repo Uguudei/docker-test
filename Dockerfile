@@ -42,5 +42,4 @@ COPY script.py /myapp
 COPY src/ /myapp/src
 
 # Execute command
-CMD ["script.py"]
-ENTRYPOINT ["python3"]
+ENTRYPOINT ["python3", "script.py"]
