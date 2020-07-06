@@ -42,4 +42,5 @@ COPY script.py /myapp
 COPY src/ /myapp/src
 
 # Execute command
-CMD exec python3 script.py export
+CMD python3 script.py
+# ENTRYPOINT python3 script.py
