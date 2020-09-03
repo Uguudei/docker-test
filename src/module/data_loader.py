@@ -17,8 +17,3 @@ def main():
     """Test oracle_import function"""
     print('Test import from Oracle DB')
     print(oracle_import('SELECT sysdate FROM dual'))
-
-
-if __name__ == '__main__':
-    # execute only if run as the entry point into the program
-    main()

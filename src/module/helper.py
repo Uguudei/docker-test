@@ -1,4 +1,6 @@
+import logging
 import time
+import functools
 
 
 def hello_world():
@@ -40,3 +42,17 @@ def timeit(method):
             print('{!r:<20} time spent: {}'.format(method.__name__, elapsed_duration))
         return result
     return timed
+
+
+def logging_timer(f):
+    @functools.wraps(f)
+    def wrapper(*args, **kwargs):
+        logger = logging.getLogger(f.__name__)
+        logger.info(f'{f.__name__} initiated')
+        start_time = time.time()
+        method_result = f(*args, **kwargs)
+        elapsed_duration = elapsed_time(time.time() - start_time)
+        logger.info(f'{f.__name__} ended - time spent: {elapsed_duration}')
+        return method_result
+
+    return wrapper

@@ -1,10 +1,13 @@
+import logging
 import math
 
 import pandas as pd
 from sqlalchemy import create_engine, types
 
 from src.config.read_config import set_oracle_connection
-from src.module.helper import timeit
+from src.module.helper import timeit, logging_timer
+
+logger = logging.getLogger(__name__)
 
 
 def col_length(str_len):
@@ -30,12 +33,14 @@ def sql_col(data_frame):
     return dtypes_dict
 
 
-@timeit
+# @timeit
+@logging_timer
 def oracle_export(data_frame, table_name, index=False, if_exists='replace'):
     """Export to oracle DB"""
     engine = create_engine(set_oracle_connection())  # , convert_unicode=True, encoding='utf-8')
     output_dtypes_dict = sql_col(data_frame)
     data_frame.to_sql(table_name.lower(), con=engine, if_exists=if_exists, index=index, dtype=output_dtypes_dict)
+    logger.info('exported successfully')
 
 
 def main():
@@ -43,8 +48,3 @@ def main():
     df = pd.DataFrame({'col1': [1, 2], 'col2': [3, 4]})
     print('Test export to Oracle DB')
     print(oracle_export(df, 'oracle_export_test'))
-
-
-if __name__ == '__main__':
-    # execute only if run as the entry point into the program
-    main()

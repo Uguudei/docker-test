@@ -1,20 +1,28 @@
+import logging
 import sys
-import cx_Oracle
 
 from src.export import export
+from src.module.helper import logging_timer
 from src.read import read
 
+# Define logger for a app
+logger = logging.getLogger(__name__)
 
+
+@logging_timer
 def run(command):
-    print('run() initiated')
-    print('All commands:', command)
+    logger.info('function initiated')
+    logger.info(f'All commands:{command}')
     if 'export' in command:
-        print('command 1')
+        export()
+        logger.debug('command 1')
     elif 'read' in command:
-        print('command 2')
+        read()
+        logger.debug('command 2')
     elif len(command) == 1:
-        print('no command')
-    print('run() ended')
+        logger.debug('command 2')
+    logger.warning('test warning')
+    logger.debug('ended')
 
 
 if __name__ == '__main__':
