@@ -1,2 +1,3 @@
-# docker_test
-Deploying oracle &amp; python app in docker
+# Repository for testing docker with oracle client 
+
+Use this repo for installing oracle client in docker image
