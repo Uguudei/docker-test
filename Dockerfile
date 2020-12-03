@@ -57,4 +57,4 @@ ENV ORACLE_PORT $ORACLE_PORT
 ENV ORACLE_SERVICE $ORACLE_SERVICE
 
 # Execute command
-ENTRYPOINT ["python3", "script.py"]
+RUN ["python3", "script.py"]
