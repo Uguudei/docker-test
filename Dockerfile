@@ -57,4 +57,4 @@ ENV ORACLE_PORT $ORACLE_PORT
 ENV ORACLE_SERVICE $ORACLE_SERVICE
 
 # Execute command
-RUN ["python3", "script.py"]
+CMD exec python3 script.py
