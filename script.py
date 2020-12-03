@@ -14,7 +14,7 @@ logger.info('start---------------------------------------------------------')
 
 if __name__ == '__main__':
     # run(sys.argv)
-    run(['test', 'export'])
+    # run(['test', 'export'])
     logger.info('volume working')
 
 logger.info('end-----------------------------------------------------------')
