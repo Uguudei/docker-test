@@ -42,6 +42,8 @@ COPY script.py /myapp
 # Copy source code
 COPY src/ /myapp/src
 
+RUN mkdir logs
+
 # Oracle connection variables
 ARG ORACLE_USERNAME
 ARG ORACLE_PASSWORD
