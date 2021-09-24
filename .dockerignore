@@ -1,12 +1,5 @@
 # git folder
 .git
 
-# Pycharm config
-.idea
-
 # Vscode config
 .vscode
-
-# Not used Project directories
-notebooks
-reports

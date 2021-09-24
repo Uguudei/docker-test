@@ -5,10 +5,10 @@ ARG release=19
 ARG update=6
 
 # Install Oracle Instant Client
-RUN  yum -y install oracle-release-el7 && \
-     yum-config-manager --enable ol7_oracle_instantclient && \
-     yum -y install oracle-instantclient${release}.${update}-basic && \
-     rm -rf /var/cache/yum
+RUN yum -y install oracle-release-el7 && \
+    yum-config-manager --enable ol7_oracle_instantclient && \
+    yum -y install oracle-instantclient${release}.${update}-basic && \
+    rm -rf /var/cache/yum
 
 # Download and install conda
 RUN curl -o /tmp/miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
