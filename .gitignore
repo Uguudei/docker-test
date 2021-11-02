@@ -141,19 +141,11 @@ config.yaml
 
 # Ignore Pycharm project files
 # But include Pycharm project code styles
-.idea/**
-!.idea/deployment.xml
-!.idea/codeStyles/
-!.idea/codeStyles/Project.xml
-# Following will include everything in codeStyles folder
-# !.idea/codeStyles/**
-
-# Includes data files
-data/*/*
-!data/external/.gitkeep
-!data/interim/.gitkeep
-!data/processed/.gitkeep
-!data/raw/.gitkeep
+.idea/
+# Data files
+data/
+# Logs
+logs/
 
 # Temprary Office file created when eding xlsx
 ~$*.xlsx
