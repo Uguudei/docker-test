@@ -15,7 +15,7 @@ ENV LD_LIBRARY_PATH /opt/oracle/instantclient_21_3:$LD_LIBRARY_PATH
 ENV NLS_LANG "AMERICAN_AMERICA.AL32UTF8"
 # Install Oracle instant client
 RUN mkdir /opt/oracle && cd /opt/oracle && \
-    wget -q --show-progress "https://download.oracle.com/otn_software/linux/instantclient/213000/instantclient-basic-linux.x64-21.3.0.0.0.zip" -O instant_client.zip && \
+    curl -SL "https://download.oracle.com/otn_software/linux/instantclient/213000/instantclient-basic-linux.x64-21.3.0.0.0.zip" -o instant_client.zip && \
     unzip instant_client.zip && rm instant_client.zip
 # [Optional] Uncomment this section to install Oracle SQL Plus. It requires Oracle instant client
 # RUN cd /opt/oracle && \
