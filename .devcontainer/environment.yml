@@ -1,0 +1,7 @@
+# Include only packages necessary in development environment
+name: base
+channels:
+  - defaults
+dependencies:
+  - ipykernel
+prefix: /opt/conda
