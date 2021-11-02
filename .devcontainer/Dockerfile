@@ -19,7 +19,7 @@ RUN mkdir /opt/oracle && cd /opt/oracle && \
     unzip instant_client.zip && rm instant_client.zip
 # [Optional] Uncomment this section to install Oracle SQL Plus. It requires Oracle instant client
 # RUN cd /opt/oracle && \
-#     wget "https://download.oracle.com/otn_software/linux/instantclient/213000/instantclient-sqlplus-linux.x64-21.3.0.0.0.zip" -O sqlplus.zip && \
+#     wget  -q --show-progress "https://download.oracle.com/otn_software/linux/instantclient/213000/instantclient-sqlplus-linux.x64-21.3.0.0.0.zip" -O sqlplus.zip && \
 #     unzip sqlplus.zip && rm sqlplus.zip
 
 # Copy environment.yml (if found) to a temp location so we update the environment. Also
