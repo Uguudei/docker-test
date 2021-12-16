@@ -31,9 +31,6 @@ WORKDIR /myapp
 # Copy requirements file
 COPY src/requirements.txt /myapp
 
-# Use to install conda package
-# RUN conda install -y -q -c conda-forge implicit==0.4.2
-
 # Install Python dependencies via pip
 RUN pip install --no-cache-dir -r requirements.txt
 
